@@ -1,5 +1,5 @@
-
 using InternshipTask.Data;
+using InternshipTask.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace InternshipTask
@@ -17,6 +17,8 @@ namespace InternshipTask
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped(typeof(IGenericRepositoy<>), typeof(GenericRepository<>));
 
             var app = builder.Build();
 

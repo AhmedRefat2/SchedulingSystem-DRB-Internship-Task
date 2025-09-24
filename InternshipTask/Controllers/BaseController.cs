@@ -16,6 +16,12 @@ namespace InternshipTask.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var entities = await _repository.GetAllAsync();
+            return Ok(entities);
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<T>> GetById(int id)
         {
