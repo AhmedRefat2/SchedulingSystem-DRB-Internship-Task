@@ -1,11 +1,11 @@
-# 🚦 DRB - Route Scheduling API (.NET 8 / EF Core)
+# DRB - Route Scheduling API (.NET 8 / EF Core)
 
 A **RESTful API** for managing drivers, routes, and schedules.  
 Built with **ASP.NET Core 8**, **Entity Framework Core**, and a relational database (**SQL Server**).  
 
 ---
 
-## ✨ Features
+## Features
 - **Driver Management**
   - Create, read, update, delete drivers
   - Track availability status
@@ -20,7 +20,7 @@ Built with **ASP.NET Core 8**, **Entity Framework Core**, and a relational datab
   - Apply Pagination For schedule history Of Specific Driver (using Specification Design pattern)
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **.NET 8 / ASP.NET Core Web API**
 - **Entity Framework Core** (Code-First Migrations)
 - **SQL Server Engine**
@@ -56,7 +56,7 @@ GET /api/drivers/{driverId}/history/paged?page=1&pageSize=10 → Get history wit
 
 GET /api/drivers/{driverId}/history/{type} → Filter history (past / upcoming) With Pagination 
 
-📌 Notes
+Notes
 
 Business rule: A driver cannot be assigned to multiple schedules on the same date.
 
@@ -64,6 +64,6 @@ Validation is enforced in both the API layer and the Database (Unique Index).
 
 Ready for extension: e.g., driver history, advanced scheduling, reporting.
 
-📜 License
+License
 
 MIT License © 2025 Ahmed Refaat;
